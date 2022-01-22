@@ -11,3 +11,10 @@ class User:
 
         User.user_User.append(self)
 
+    def delete_user(self):
+
+        User.user_User.remove(self)
+
+
+    
+
