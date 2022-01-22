@@ -1,6 +1,7 @@
+from user import User
 import unittest
 
-
-class TestPasswords(unittest.TestCase):
+class TestUser(unittest.TestCase):
     def tearDown(self):
-        Password.user_passwords = []
+        User.user_User = []
+    def setUp(self):
