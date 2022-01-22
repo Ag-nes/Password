@@ -5,6 +5,9 @@ class User:
         self.user_name = user_name
         self.password = password
 
-    user_accounts = []
+    user_User = []
 
-    
+    def keep_user(self):
+
+        User.user_User.append(self)
+
