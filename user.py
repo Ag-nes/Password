@@ -15,6 +15,16 @@ class User:
 
         User.user_User.remove(self)
 
+    @classmethod
+    def display_users(cls):
+
+        return cls.user_User
+    @classmethod
+    def find_by_name(cls, user_name):
+        for user in cls.user_User:
+            if user.user_name == user_name:
+                return user
+
 
     
 
