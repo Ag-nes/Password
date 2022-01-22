@@ -25,6 +25,13 @@ class User:
             if user.user_name == user_name:
                 return user
 
+    @classmethod
+    def user_present(cls, user_name):
+        for user in cls.user_User:
+            if user.user_name == user_name:
+                return True
+            return False
+
 
     
 
