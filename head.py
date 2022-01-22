@@ -1,3 +1,4 @@
+from unittest.main import main
 from credentials import Credentials
 from user import User
 
@@ -89,7 +90,7 @@ def head():
                             delete_page(remove_page)
 
                         else:
-                            print(f'I cant find {page}')
+                            print(f'Theres no {page}')
 
                     elif log_choice == 3:
                         if display_pages():
@@ -102,7 +103,7 @@ def head():
                             print('\n')
 
                     elif log_choice == 4:
-                        print('adios')
+                        print('')
                         break
             else:
                 print('wrong credentials')
@@ -123,14 +124,14 @@ def head():
             print('PASSWORD')
             password = input()
 
-            save_account(create_account(
+            save_user(create_user(
                 first_name, last_name, user_name, password))
-            # create and save a new account
+            
             print('ACCOUNT CREATED')
             while True:
 
                 print(
-                    f'Welcome {user_name}, Use the following numbers to select their corresponding values')
+                    f'Welcome {user_name}, Follow the prompts')
                 print(
                     ' 1) Save new password \n 2) Delete password \n 3) Display saved passwords \n 4) Log out ')
 
@@ -145,7 +146,6 @@ def head():
                     print('password')
                     password = input()
 
-                    # created and saved page
                     save_page(create_page(page, password))
 
                 elif log_choice == 2:
@@ -166,23 +166,23 @@ def head():
                                 f'{pag.page}:{pag.password}'
                             )
                     else:
-                        print('NO PASSWORD SAVED YET')
+                        print('PLEASE SAVE YOUR PASSWORD')
 
                 elif log_choice == 4:
                     break
 
         elif choice == 3:
-            print('ABOUT PASSLOCK')
+            print('ABOUT PASSWORD-LOCKER')
             print(
                 '''
-            Passlock is an sort of script application that allows you to store  password from different ccounts. In case of many accounts on social media passlock can be used to store the different password from the social media  accounts.Instead of having to use one password for all your sites so that you can remember  easily,you can use different password and store them in passlock and only have to remember your passlock password. This can prove to be very helpful especially  against hackers.
+            Password-locker is an application that allows users to store password of multi-accounts.Store your passwords with this application cause its the best.
                                     ''')
 
         elif choice == 4:
             if display_accounts():
-                for account in display_accounts():
+                for user in display_accounts():
                     print(
-                        f'{account.user_name}'
+                        f'{user.user_name}'
                     )
             else:
                 print('NO USER')
