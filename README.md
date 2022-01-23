@@ -2,7 +2,7 @@
 ## Author
 Agnes Nafula
 ### Description
-This one is an application that allows users to store passwords and user names.
+This is an application that will help users manage passwords and even generate new passwords for the user.
 ### Technologies Used
 * python
 ### Installation Requirements
